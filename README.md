@@ -504,46 +504,44 @@ Suggested screenshots include:
 ### Home Page
 
 ```markdown
-![Home Page](screenshots/home.png)
+![Home Page](screenshots/home-page.png)
 ```
 
 ### User Registration / Login
 
 ```markdown
-![User Registration](screenshots/user-registration.png)
+![User Registration](screenshots/login-page.png)
 ```
 
 ### Product Page
 
 ```markdown
-![Products](screenshots/products.png)
+![Products](screenshots/product-page.png)
 ```
 
 ### Shopping Cart
 
 ```markdown
-![Shopping Cart](screenshots/cart.png)
+![Shopping Cart](screenshots/shopping-cart.png)
 ```
 
 ### Payment / Transaction
 
 ```markdown
-![Payment](screenshots/payment.png)
+![Payment](screenshots/transaction.png)
 ```
 
 ### Admin Dashboard
 
 ```markdown
-![Admin Dashboard](screenshots/admin.png)
+![Admin Dashboard](<screenshots/Admin -dashboard.png>)
 ```
 
 ### Fraud Detection / Transaction Verification
 
 ```markdown
-![Fraud Detection](screenshots/fraud-detection.png)
+![Fraud Detection](screenshots/verification.png)
 ```
-
-> Replace the example image paths above with the actual screenshot filenames after adding the screenshots to the repository.
 
 ---
 
