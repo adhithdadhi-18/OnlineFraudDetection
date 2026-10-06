@@ -497,48 +497,33 @@ Open that address in your browser.
 
 # 📸 Screenshots
 
-
 ### Home Page
 
-```markdown
 ![Home Page](screenshots/home-page.png)
-```
 
 ### User Registration / Login
 
-```markdown
 ![User Registration](screenshots/login-page.png)
-```
 
 ### Product Page
 
-```markdown
 ![Products](screenshots/product-page.png)
-```
 
 ### Shopping Cart
 
-```markdown
 ![Shopping Cart](screenshots/shopping-cart.png)
-```
 
 ### Payment / Transaction
 
-```markdown
 ![Payment](screenshots/transaction.png)
-```
 
 ### Admin Dashboard
 
-```markdown
-![Admin Dashboard](<screenshots/Admin -dashboard.png>)
-```
+![Admin Dashboard](screenshots/Admin%20-dashboard.png)
 
 ### Fraud Detection / Transaction Verification
 
-```markdown
 ![Fraud Detection](screenshots/verification.png)
-```
 
 ---
 
