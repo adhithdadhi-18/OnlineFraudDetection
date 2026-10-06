@@ -219,30 +219,36 @@ def addtocart(request):
     image1=request.GET.get("aimage1")
     quantity=request.GET.get("quantity")
     price=request.GET.get("aprice")
-    
-   
+
     mydb=mysql.connector.connect(host="localhost",user="root",password="",database="onlinefddb")
     mycursor=mydb.cursor()
+
     try:
-     mn="INSERT INTO shopping_cart(email,product_code,product_name,image1,quantity,price)VALUES('"+email+"','"+product_code+"','"+product_name+"','"+image1+"','"+quantity+"','"+price+"')"
-     print(mn)
-     mycursor.execute(mn)
-     mydb.commit()
-     bc="select * from shopping_cart where email='"+email+"' and txn_status='movedtocart'"
-     print(bc)
-     cd=mycursor.execute(bc)
-     rows1=mycursor.fetchall()
-     print(rows1)
-     cartnolist=[]
-     amt=0
-     for x in rows1:
-      amt=amt+(int(x[5])*int(x[6]))
-      cartnolist.append(x[0]);
-     request.session['pamt']=amt 
-     request.session['cartnolist']=cartnolist
-     return render(request,'viewcart.html',{'row1':rows1,'total':amt,'id':request.session['id'],'name':request.session['name'],'email':request.session['email'],'contact':request.session['contact']})      
+        mn="INSERT INTO shopping_cart(email,product_code,product_name,image1,quantity,price,txn_status) VALUES('"+email+"','"+product_code+"','"+product_name+"','"+image1+"','"+quantity+"','"+price+"','movedtocart')"
+        print(mn)
+        mycursor.execute(mn)
+        mydb.commit()
+
+        bc="select * from shopping_cart where email='"+email+"' and txn_status='movedtocart'"
+        print(bc)
+        mycursor.execute(bc)
+        rows1=mycursor.fetchall()
+        print(rows1)
+
+        cartnolist=[]
+        amt=0
+
+        for x in rows1:
+            amt=amt+(int(x[5])*int(x[6]))
+            cartnolist.append(x[0])
+
+        request.session['pamt']=amt
+        request.session['cartnolist']=cartnolist
+
+        return render(request,'viewcart.html',{'row1':rows1,'total':amt,'id':request.session['id'],'name':request.session['name'],'email':request.session['email'],'contact':request.session['contact']})
+
     except:
-     return render(request,'viewcart.html',{'row1':rows1,'total':amt,'id':request.session['id'],'name':request.session['name'],'email':request.session['email'],'contact':request.session['contact'],'message': 'Some issue. Try after some time.'})  
+        return render(request,'viewcart.html',{'row1':rows1,'total':amt,'id':request.session['id'],'name':request.session['name'],'email':request.session['email'],'contact':request.session['contact'],'message':'Some issue. Try after some time.'})
 def removecart(request):  
     email=request.session['email']
     cartno=request.GET.get("cartno")
