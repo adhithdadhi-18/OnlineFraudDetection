@@ -497,9 +497,6 @@ Open that address in your browser.
 
 # 📸 Screenshots
 
-Screenshots can be added here to demonstrate the main parts of the application.
-
-Suggested screenshots include:
 
 ### Home Page
 
